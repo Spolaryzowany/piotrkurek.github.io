@@ -1,0 +1,414 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-image: url('vintage-concrete.png');
+    font-family: 'Montserrat', sans-serif;
+}
+
+#loadingWindow{
+    background: url('vintage-concrete.png');
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 5;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    #circle{
+        border: 16px solid #f3f3f3;
+        border-top: 16px solid brown;
+        border-radius: 50%;
+        width: 120px;
+        height: 120px;
+        animation: spin 1s linear infinite;
+    }
+
+    p{
+        padding: 10px 0;
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    @keyframes spin {
+        0%{
+            transform: rotate(0deg);
+        }
+
+        100%{
+            transform: rotate(360deg);
+        }
+    }
+}
+
+section{
+    display: none;
+}
+
+#welcome{
+    height: 100vh;
+    position: relative;
+
+    .frame{
+        padding: 40px;
+        img{
+            display: block;
+            border: 2px solid brown;
+            margin: auto;
+            border-radius: 50%;
+        }
+    }
+
+    h1{
+        text-align: center;
+        font-size: 40px;
+        font-weight: 300;
+        padding-bottom: 50px;
+    }
+
+    h2{
+        padding-top: 200px;
+        text-align: center;
+        color: brown;
+    }
+
+    nav{
+        margin: auto;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 400px;
+        width: 800px;
+        height: 50px;
+        background-color: brown;
+        transition: width .5s linear;
+        z-index: 1;
+
+        ul{
+            width: 800px;
+            margin: auto;
+            height: 50px;
+        }
+
+        ul li{
+            text-align: center;
+            color: white;
+            display: block;
+            width: 25%;
+            height: 50px;
+            float: left;
+            border-left: 1px dashed rgb(168, 108, 108);
+            border-right: 1px dashed rgb(168, 108, 108);
+            box-sizing: border-box;
+            line-height: 3.2;
+            cursor: pointer;
+
+            span{
+                margin-left: 5px;
+            }
+
+            &:hover{
+                background-color: rgb(175, 80, 80);
+            }
+        }
+    }
+
+    button{
+        position: absolute;
+        display: block;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        background-color: brown;
+        color: white;
+        font-size: 20px;
+        text-transform: uppercase;
+        border: none;
+        outline: none;
+        height: 70px;
+        width: 200px;
+        cursor: pointer;
+        border-radius: 50% 50% 0 0;
+        transition: height .2s linear;
+
+        &:hover{
+            height: 100px;
+        }
+    }
+}
+
+#about{
+    min-height: 600px;
+    background-color: rgb(241, 227, 227);
+    font-family: 'Sarabun', sans-serif;
+
+    #side-panel{
+        width: 1000px;
+        margin: auto;
+        padding: 30px 0 0;
+    }
+
+    #side-panel .side{
+        width: 50%;
+        float: left;
+        margin-bottom: 50px;
+
+        ul{
+            width: 80%;
+            margin: auto;
+        }
+
+        ul li{
+            font-size: 20px;
+            color: brown;
+            padding: 8px 0;
+        }
+    }
+
+    .leave-text{
+        clear: both;
+
+        textarea{
+            width: 66%;
+            height: 80px;
+            padding: 1% 2%;
+            font-size: 18px;
+            background-color: rgb(109, 25, 25);
+            color: white;
+            border: 2px solid brown;
+            outline: none;
+            display: block;
+            margin: auto;
+        }
+    }
+}
+
+#skills{
+    height: 700px;
+    background-image: url('vintage-concrete.png');
+
+    h1{
+        font-size: 32px;
+        text-align: center;
+        font-weight: 300;
+        padding: 60px 0 0;
+        width: 600px;
+        margin: auto;
+    }
+
+    hr{
+        width: 200px;
+        margin: 50px auto;
+        height: 2px;
+        background-color: brown;
+        border: none;
+    }
+
+    .skill{
+        width: 600px;
+        margin: auto;
+        text-align: center;
+
+        img{
+            margin: 0 10px;
+            width: 64px;
+        }
+    }
+}
+
+#projects{
+    min-height: 600px;
+    background-color: rgb(241, 227, 227);
+
+    .project-container{
+        width: 1400px;
+        height: 100%;
+        margin: auto;
+        padding-top: 10px;
+
+        .left-box, .main-box, .right-box{
+            float: left;
+        }
+
+        .left-box, .right-box{
+            width: 350px;
+            height: 100%;
+
+            img{
+                width: 80%;
+                display: block;
+                margin: 20px auto;
+                border-radius: 5px;
+
+                &:hover{
+                    box-shadow: 0 0 8px 5px brown;
+                }
+            }
+        }
+
+        .main-box{
+            height: 100%;
+            width: 700px;
+
+            .img-cont{
+                width: 90%;
+                margin: auto;
+                overflow-y: scroll;
+                height: 300px;
+
+                &::-webkit-scrollbar{
+                    display: none;
+                }
+            }
+
+            .img-cont img{
+                width: 100%;
+                border-radius: 5px;
+                display: block;
+                padding-top: 10px;
+                transition: opacity .4s linear;
+            }
+
+            h1{
+                text-align: center;
+                font-size: 30px;
+                padding: 10px 0 0;
+                text-transform: uppercase;
+            }
+
+            .tags{
+                width: 90%;
+                margin: auto;
+                padding: 10px 0;
+
+                span{
+                    font-size: 14px;
+                    color: white;
+                    background-color: brown;
+                    padding: 3px 10px;
+                    border-radius: 10px;
+                    font-weight: bold;
+                }
+            }
+
+            .project-info{
+                width: 90%;
+                margin: auto;
+
+                p{
+                    padding: 5px 0;
+                    font-family: 'Sarabun', sans-serif;
+                }
+            }
+        }
+    }
+}
+
+#contact{
+    height: 600px;
+
+    .left-side{
+        form{
+            width: 500px;
+            margin: auto;
+
+            textarea{
+                font-size: 16px;
+            }
+
+            input{
+                font-size: 18px;
+            }
+        }
+
+        form input, form textarea{
+            box-sizing: border-box;
+            display: block;
+            outline: none;
+            padding: 15px 15px;
+            width: 100%;
+            margin: 20px 0;
+            background-color: rgb(189, 174, 174);
+            border: 2px solid rgb(216, 125, 125);
+
+            &:focus{
+                border-color: brown;
+            }
+        }
+
+        form button{
+            font-size: 18px;
+            text-transform: uppercase;
+            width: 150px;
+            height: 40px;
+            display: block;
+            margin: auto;
+            border: 2px solid rgb(216, 125, 125);
+            background-color: inherit;
+            outline: none;
+            cursor: pointer;
+            color: brown;
+
+            &:hover{
+                border-color: brown;
+            }
+        }
+    }
+
+    .social-side{
+        width: 800px;
+        margin: auto;
+        padding: 80px 0 0;
+        text-align: center;
+
+        .social{
+            width: 150px;
+            margin: 0 20px;
+            display: inline-block;
+            cursor: pointer;
+            text-decoration: none;
+
+            &:hover .social-name span{
+                left: 0;
+            }
+
+            i{
+                font-size: 40px;
+                float: left;
+                color: black;
+            }
+
+            .social-name{
+                float: left;
+                line-height: 2.3;
+                width: 100px;
+                height: 36px;
+                margin-left: 10px;
+                margin-top: 3px;
+                overflow: hidden;
+                position: relative;
+
+                span{
+                    background-color: brown;
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    left: -100px;
+                    top: 0;
+                    transition: left .3s linear;
+                    color: white;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+
+@import 'media';

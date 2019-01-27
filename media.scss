@@ -1,0 +1,255 @@
+@media screen and (min-width: 601px) and (max-width: 1024px){
+    #about #side-panel{
+        width: 600px;
+
+        .side{
+            width: 100%;
+            float: none;
+            margin-bottom: 0;
+        }
+
+        ul{width: 100%;}
+
+        .leave-text{
+            padding: 30px 0;
+
+            textarea{
+                width: 80%;
+            }
+        }
+    }
+
+    #contact{
+        .social-name a{
+            left: 0 !important;
+        }
+    }
+}
+
+@media screen and (max-width: 600px){
+    #about #side-panel{
+        width: 100%;
+
+        .side{
+            width: 100%;
+            float: none;
+            margin-bottom: 0;
+        }
+
+        ul{width: 80%;}
+        ul li{
+            text-align: justify;
+        }
+
+        .leave-text{
+            padding: 30px 0;
+
+            textarea{
+                width: 100%;
+                box-sizing: border-box;
+            }
+        }
+    }
+
+    #contact{
+        .social-name a{
+            left: 0 !important;
+        }
+    }
+}
+
+
+
+
+
+@media screen and (min-width: 671px) and (max-width: 800px){
+    #welcome nav{
+        width: 100% !important;
+
+        ul{
+            width: 650px;
+        }
+
+        // ul li{}
+    }
+}
+
+@media screen and (max-width: 670px){
+    #welcome{
+        nav{
+            width: 200px !important;
+            top: 380px !important;
+            position: absolute !important;
+    
+            ul{
+                width: 200px;
+                height: 200px;
+            }
+
+            ul li{
+                width: 100%;
+                float: none;
+                background-color: brown;
+                border-left: none;
+                border-right: none;
+                border-top: 1px dashed rgb(168, 108, 108);
+                border-bottom: 1px dashed rgb(168, 108, 108);
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 501px) and (max-width: 670px){
+    #welcome{
+        h1{
+            padding-bottom: 30px;
+        }
+    
+        h2{
+            padding-top: 0;
+        }
+    }
+}
+
+@media screen and (max-width: 500px){
+    #welcome{
+        h1{
+            font-size: 30px;
+            padding-bottom: 20px;
+        }
+
+        h2{
+            padding-top: 0;
+            font-size: 20px;
+        }
+    }
+}
+
+@media screen and(max-height: 500px){
+    #welcome{
+        height: 700px;
+    }
+}
+
+
+
+//Skills
+
+@media screen and (min-width: 601px) and (max-width: 700px){
+    #skills{
+        h1{
+            font-size: 28px;
+        }
+    }
+}
+
+@media screen and (max-width: 600px){
+    #skills{
+        .skill{
+            width: 300px;
+        }
+
+        .skill img{
+            width: 54px;
+        }
+
+        h1{
+            width: 300px;
+            font-size: 24px;
+        }
+
+        hr{
+            margin: 40px auto;
+        }
+    }
+}
+
+//Project
+
+@media screen and (min-width: 1151px) and (max-width: 1400px){
+    #projects .project-container{
+        width: 1150px;
+
+        .right-box{
+            display: none;
+        }
+    }
+}
+
+@media screen and (min-width: 701px) and (max-width: 1150px){
+    #projects .project-container{
+        width: 700px;
+
+        .main-box{
+            display: none;
+        }
+
+        .left-box{
+            width: 100%;
+            text-align: center;
+
+            img{
+                display: inline-block;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 700px){
+    #projects{
+        min-height: 400px;
+    }
+
+    #projects .project-container{
+        width: 320px;
+
+        .main-box{
+            display: none;
+        }
+
+        .left-box{
+            width: 100%;
+            text-align: center;
+
+            img{
+                display: inline-block;
+            }
+        }
+    }
+}
+
+
+//Socials
+
+@media screen and (max-width: 800px){
+    #contact{
+        height: 700px;
+    }
+
+    #contact .social-side{
+        width: 120px;
+
+        .social{
+            width: 50px;
+            margin: 5px auto;
+        }
+
+        .social-name{
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 600px){
+    #contact .left-side{
+        form{
+            width: 95%;
+        }
+    }
+}
+
+@media screen and (max-height: 700px){
+    #welcome{
+        height: 700px;
+    }
+}
